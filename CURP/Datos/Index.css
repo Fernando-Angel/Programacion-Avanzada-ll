@@ -16,6 +16,9 @@ select {
 .box1{
     width: 50px;
 }
+.box2{
+    width: 50px;
+}
 label{
     margin-top: 10px;
 }
