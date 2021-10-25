@@ -40,28 +40,6 @@ function escaparXML(cadena) {
     return cadena;
 };
 
-//Genera un objeto Blob con los datos en un archivo TXT
-function generarTexto(datos) {
-    var texto = [];
-    texto.push('Datos Personales:\n');
-    texto.push('Nombre: ');
-    texto.push(datos.nombre);
-    texto.push('\n');
-    texto.push('Teléfono: ');
-    texto.push(datos.telefono);
-    texto.push('\n');
-    texto.push('Fecha: ');
-    texto.push(datos.fecha);
-    texto.push('\n');
-    //El contructor de Blob requiere un Array en el primer parámetro
-    //así que no es necesario usar toString. el segundo parámetro
-    //es el tipo MIME del archivo
-    return new Blob(texto, {
-        type: 'text/plain'
-    });
-};
-
-
 //Genera un objeto Blob con los datos en un archivo XML
 function generarXml(datos) {
     var texto = [];
