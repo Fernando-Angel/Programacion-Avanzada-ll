@@ -70,3 +70,22 @@ function DescargarXML() {
     var datos = obtenerDatos();
     descargarArchivo(generarXml(datos), 'archivo.xml');
 }
+
+
+function Mode() {
+    if (document.querySelector("#body.body.dark"))
+    {
+        $("#body").removeClass("dark");
+        $("#switch").removeClass("active");
+        $("#boton-xml").addClass("btn-success");
+        $("#boton-xml").removeClass("btn-warning");
+    }
+    else{
+        $("#body").addClass("dark");
+        $("#switch").addClass("active");
+        $("#boton-xml").removeClass("btn-success");
+        $("#boton-xml").addClass("btn-warning");
+    }
+    //var element = document.getElementById("body");
+    //element.classList.toggle("dark");
+}

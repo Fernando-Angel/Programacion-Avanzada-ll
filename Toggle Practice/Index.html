@@ -7,7 +7,8 @@
     <title>Descargar Formulario</title>
 
     <link href="Datos/Index.css" rel="stylesheet" type="text/css">
-    
+    <link href="Datos/style.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -15,13 +16,13 @@
 
 
 </head>
-<body>
+<body class="body" id="body">
     <script src="Datos/index.js"></script>
     <form>
-        <div class="container d-flex flex-row-reverse">
-            <button class="switch" id="switch">
-                <span> <img src="Imagenes/greenLantern.png"> </span>
-                <span> <img src="Imagenes/sinestroCorps.png"> </span>
+        <div class="container d-flex flex-row-reverse mt-1">
+            <button class="switch" id="switch" onclick="Mode()" type="button">
+                <span> <img src="Imagenes/greenLantern.png" width="20px" class="mb-1"> </span>
+                <span> <img src="Imagenes/sinestroCorps.png" width="22px" class="mb-1"> </span>
             </button>
         </div>
         <div>
@@ -53,7 +54,7 @@
                             </tr>
                         </table>
                         <br/>
-                        <input type="button" id="boton-xml" value="Descargar XML" onclick="DescargarXML()"/>
+                        <input type="button" id="boton-xml" class="btn btn-success" value="Descargar XML" onclick="DescargarXML()"/>
                     </div>
                 </div>
             </center>
