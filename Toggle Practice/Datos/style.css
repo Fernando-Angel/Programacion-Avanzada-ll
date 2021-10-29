@@ -33,10 +33,9 @@ span{
     width: 30px;
     height: 30px;
     line-height: 30px;
-
 }
 
-.body {
+/*.body {
     background: rgb(96, 202, 74);
     font-family: 'Roboto', sans-serif;
     transition: .3s ease all;
@@ -50,13 +49,13 @@ span{
 }
 .box{
     background-color: rgba(0,0,0,.2);
-}
+}*/
 #boton-xml{
     border-color: black;
 }
 
-/*.body{
-    background-color: black;
+.body{
+    background-color: rgba(0,0,0,.8);
 }
 
 div#cuerpo{
@@ -80,4 +79,4 @@ div#cuerpo.dark{
     transition: .3s ease all;
     font-weight: bold;
     color: whitesmoke;
-}*/
+}

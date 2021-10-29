@@ -72,7 +72,7 @@ function DescargarXML() {
 }
 
 
-function Mode() {
+/*function Mode() {
     if (document.querySelector("#body.body.dark"))
     {
         $("#body").removeClass("dark");
@@ -88,9 +88,9 @@ function Mode() {
         $("#boton-xml").addClass("btn-warning");
         $(".box").removeClass("dark");
     }
-}
+}*/
 
-/*function Mode() {
+function Mode() {
     if (document.querySelector("#cuerpo.dark"))
     {
         $("#cuerpo").removeClass("dark");
@@ -106,4 +106,4 @@ function Mode() {
         $("#boton-xml").addClass("btn-warning");
         $(".box").removeClass("dark");
     }
-}*/
+}
