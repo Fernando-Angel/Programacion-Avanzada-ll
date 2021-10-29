@@ -79,13 +79,31 @@ function Mode() {
         $("#switch").removeClass("active");
         $("#boton-xml").addClass("btn-success");
         $("#boton-xml").removeClass("btn-warning");
+        $(".box").addClass("dark");
     }
     else{
         $("#body").addClass("dark");
         $("#switch").addClass("active");
         $("#boton-xml").removeClass("btn-success");
         $("#boton-xml").addClass("btn-warning");
+        $(".box").removeClass("dark");
     }
-    //var element = document.getElementById("body");
-    //element.classList.toggle("dark");
 }
+
+/*function Mode() {
+    if (document.querySelector("#cuerpo.dark"))
+    {
+        $("#cuerpo").removeClass("dark");
+        $("#switch").removeClass("active");
+        $("#boton-xml").addClass("btn-success");
+        $("#boton-xml").removeClass("btn-warning");
+        $(".box").addClass("dark");
+    }
+    else{
+        $("#cuerpo").addClass("dark");
+        $("#switch").addClass("active");
+        $("#boton-xml").removeClass("btn-success");
+        $("#boton-xml").addClass("btn-warning");
+        $(".box").removeClass("dark");
+    }
+}*/

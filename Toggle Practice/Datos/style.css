@@ -1,5 +1,5 @@
 .switch {
-    background: rgb(223, 219, 32);
+    background: rgb(163, 161, 53);
     border-radius: 100px;
     border: none;
     position: relative;
@@ -36,7 +36,6 @@ span{
 
 }
 
-
 .body {
     background: rgb(96, 202, 74);
     font-family: 'Roboto', sans-serif;
@@ -49,6 +48,36 @@ span{
     font-weight: bold;
     color: whitesmoke;
 }
+.box{
+    background-color: rgba(0,0,0,.2);
+}
 #boton-xml{
     border-color: black;
 }
+
+/*.body{
+    background-color: black;
+}
+
+div#cuerpo{
+    margin: auto;
+    margin-top: 60px;
+    background-color: blue;
+    width: 400px;
+    height: 500;
+    background: rgb(96, 202, 74);
+    font-family: 'Roboto', sans-serif;
+    transition: .3s ease all;
+    color: rgb(0, 0, 0)
+}
+div#cuerpo.dark{
+    margin: auto;
+    margin-top: 60px;
+    background-color: blue;
+    width: 400px;
+    height: 500;
+    background: rgb(109, 107, 8);
+    transition: .3s ease all;
+    font-weight: bold;
+    color: whitesmoke;
+}*/
