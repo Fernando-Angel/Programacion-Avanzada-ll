@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descargar Formulario</title>
+
+    <link href="Datos/Index.css" rel="stylesheet" type="text/css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>   
+</head>
+<body>
+    <script src="Datos/index.js"></script>
+    <form>
+        <div class="container d-flex flex-row-reverse">
+            <input type="button" id="DarkMode" value="Cambiar colores" class="m-0"/>
+        </div>
+        <div>
+            <center class="mt-5">
+                <div class="container">
+                    <div class="modal-body">
+                        <table>
+                            <tr>
+                                <td> <label>Nombre:</label> </td>
+                                <td class="pl-2"> <input id="Nombre" type="text" class="box"> </td>
+                            </tr>
+                                <td> <label>Apellido Paterno:</label> </td>
+                                <td class="pl-2"> <input id="ApPaterno" type="text" class="box"> </td>
+                            <tr>
+                                <td> <label>Apellido Paterno:</label>
+                                <td class="pl-2"> <input id="ApMaterno" type="text" class="box"> </td>
+                            </tr>
+                                <td> <label>Address:</label>
+                                <td class="pl-2"> <input id="Address" type="text" class="box"> </td>
+                            <tr>
+                                <td> <label>Genero: </label> </td>
+                                <td class="pl-2"> 
+                                    <select id="Sexo" name="Sexo" width="300px" class="box">
+                                        <option selected="">---</option>
+                                        <option value="H">HOMBRE</option>
+                                        <option value="M">MUJER</option>
+                                    </select> 
+                                </td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <input type="button" id="boton-xml" value="Descargar XML" onclick="DescargarXML()"/>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </form>
+</body>
+</html>
