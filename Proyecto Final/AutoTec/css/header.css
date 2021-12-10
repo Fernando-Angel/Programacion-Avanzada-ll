@@ -1,0 +1,73 @@
+*{margin:0; padding:0;}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    background: #c5c6c9;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header .logo{
+    padding-left: 15px;
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 7px;
+    /*margin-right: 50px;*/
+}
+
+header nav a {
+    display: inline-block;
+    color: #000;
+    text-decoration:none;
+    padding: 10px 10px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav a:hover{
+    background: #0000004d;
+    border-radius: 60px;
+}
+
+#carCrash{
+    margin-top: 7px;
+    display: inline-block;
+    color: #000;
+    text-decoration:none;
+    padding: 10px 10px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+#carCrash:hover{
+    background: #0000004d;
+    border-radius: 60px;
+}
+
+@media screen and (max-width: 600px) {
+    header .logo,
+    header nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header2 {
+        height: auto;
+    }
+    .header2 .logo,
+    .header2 nav {
+        padding-left: 0px;
+        line-height: 20px;
+    }
+}

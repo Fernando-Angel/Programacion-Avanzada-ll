@@ -1,0 +1,60 @@
+
+footer{
+    margin: auto;
+    overflow: hidden;
+    position:fixed;
+}
+
+/*toggle*/
+button .switch{
+    margin-right: 10px;
+}
+.switch{
+    background: black;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: white;
+}
+
+.switch::after{
+    content: "";
+    display:block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 1;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+}
+
+.switch.active {
+    background: rgb(121, 121, 121);
+    color: black;
+}
+.switch.active span{
+    color: white;
+}
+.switch.active::after{
+    left:unset;
+    right: 0;
+}
+
+
+body.dark{
+    background: rgb(0, 0, 0);
+    color:white
+}
