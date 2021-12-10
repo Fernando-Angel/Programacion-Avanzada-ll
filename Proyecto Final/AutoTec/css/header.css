@@ -72,9 +72,6 @@ header nav a:hover{
     }
 }
 
-button .switch{
-    margin-right: 10px;
-}
 .switch{
     background: black;
     border-radius: 1000px;
@@ -83,6 +80,7 @@ button .switch{
     cursor: pointer;
     display: flex;
     outline: none;
+    
 }
 span {
     width: 30px;

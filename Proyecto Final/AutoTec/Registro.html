@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUTOTEC</title>
+    <title>Registro de usuarios</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style principal.css">
     <link rel="stylesheet" href="css/header.css">
@@ -13,71 +13,84 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel = "stylesheet" href ="./css/HojaEstilos.css">
+    <link rel = "stylesheet" href ="./css/HojaEstilos.css"> 
+    <link rel = "stylesheet" href ="./css/registro.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
 <body id="cuerpo">
 
-    <header id="head" class="p-0">
-        <div class="logo">
-          <a href="principal.html"  class="ml-4 mr-5">
-            <img src="Images/icono 1.png" width="50px">
-          </a>
-          <a class="nav-link" href="Automoviles.php" id="carCrash"><i class="fas fa-car-crash p-0"> Agregar Carro</i></a>
-        </div>
-        <nav>
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"1>Acceso a clientes</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
-          <a class="dropdown-item" href="Registro.html">Registrarse</a>
-            <button class="switch" id="switch" onclick="Mode()">
-              <span><i class="fas fa-sun"></i></span>
-              <span><i class="fas fa-moon"></i></span>
-            </button>
-          </div>
-        </nav>
-      </header>
-
-    <form class="formulario" method="POST" action="./Registration.php" name="Registro">
+      <form class="formulario mt-5" method="POST" action="./Registration.php" name="Registro" id="formulario">
         <h1>Crea una cuenta</h1>
         <div class="contenedor">
-            <div class ="input-contenedor">
+            <div class ="input-contenedor" id="grupo_nombre">
                 <i class="fas fa-user icon"></i>
-                <input type="text" name = "nombre" placeholder="Nombre Completo" required>
+                <input type="text" name="nombre" placeholder="Nombre Completo" id="nombre" required>
+                <i class="formulario_validacion-estado fas fa-exclamation-circle"></i>
+                <p class="formulario_input-error">Introduce tu nombre</p>
             </div>
-            <div class ="input-contenedor">
+
+            <div class ="input-contenedor" id="grupo_apellido">
                 <i class="fas fa-user icon"></i>
                 <input type="text" name = "apellidos" placeholder="Apellidos" required>
+                <i class="formulario_validacion-estado fas fa-exclamation-circle"></i>
+                <p class="formulario_input-error">Introduce un apellido valido</p>
             </div>
-            <div class ="input-contenedor">
+
+            <div class ="input-contenedor" id="grupo_correo">
                 <i class="fas fa-envelope icon"></i>
-                <input type="email" name ="emailRegistro" placeholder="Correo electrónico" required>
+                <input type="email" name ="email" placeholder="Correo electrónico" required>
+                <i class="formulario_validacion-estado fas fa-exclamation-circle"></i>
+                <p class="formulario_input-error">Introduce un correo electronico valido</p>
             </div>
+
             <div class="input-contenedor">
                 <p style="color:#2E4053;">Porfavor seleccione su género.</p>
-                <i class="fas fa-male icon"></i>
-                <input type="radio" id="male" name="genero" value="Masculino">
-                <label for="male">Masculino</label>
-                <i class="fas fa-female icon"></i>
-                <input type="radio" id="female" name="genero" value="Femenino">
-                <label for="male">Femenino</label>
+                <div class="col-md-12 ml-5">
+                  <i class="fas fa-male icon"></i>
+                  <input type="radio" id="male" name="genero" value="Masculino">
+                  <label for="male">Masculino</label>
+                  <i class="fas fa-female icon"></i>
+                  <input type="radio" id="female" name="genero" value="Femenino">
+                  <label for="male">Femenino</label>
+                </div>
             </div>
-            <div class ="input-contenedor">
+
+            <div class="input-contenedor" id="grupo_contraseña">
                 <i class="fas fa-key icon"></i>
-                <input type="password" name ="password" placeholder="Contraseña" required>
+                <input type="password" name ="password" id="password" placeholder="Contraseña" required>
+                <i class="formulario_validacion-estado fas fa-exclamation-circle"></i>
+                <p class="formulario_input-error">Introduce una contraseña valido</p>
             </div>
-            <div class ="input-contenedor">
+
+            <div class ="input-contenedor" id="grupo_password">
+                <i class="fas fa-key icon"></i>
+                <input type="password" name ="password2" id="password2" placeholder="Validar Contraseña" required>
+
+                <i class="formulario_validacion-estado fas fa-exclamation-circle"></i>
+                <p class="formulario_input-error">Ambas contraseñas deben ser iguales</p>
+            </div>
+
+            <div class ="input-contenedor" id="grupo_telefono">
                 <i class="fas fa-mobile icon"></i>
                 <input type="tel" name ="telefono" placeholder="Telefóno" required>
+
+                <i class="formulario_validacion-estado fas fa-exclamation-circle"></i>
+                <p class="formulario_input-error">Introduce un numero de telefono valido</p>
             </div>
-            <div class ="input-contenedor">
+
+            <div class ="input-contenedor" id="grupo_codigo">
                 <i class="fas fa-home icon"></i>
                 <input type="text" name="cp" placeholder="Codigo postal" required>
+                <i class="formulario_validacion-estado fas fa-exclamation-circle"></i>
+                <p class="formulario_input-error">Introduce un codigo postal valido</p>
             </div>
-            
-           <input type="submit" value ="Registrarte" class="button">
-           <p>¿Ya tienes cuenta? <a class="link" href="login.html">Iniciar Sesión</a></p>
+
+            <input type="submit" value ="Registrarte" class="button">
+            <p>¿Ya tienes cuenta? <a class="link" href="login.html">Iniciar Sesión</a></p>
         </div>
     </form>
-    <script src="js/Validation.js"></script>
+
+    <script src="js/Validar.js"></script>
 </body>
 </html>

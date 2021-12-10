@@ -46,7 +46,7 @@
 				<input type="text" name="motor" placeholder="Motor" class="input__text">
 			</div>
 			<div class="btn__group">
-				<a href="index.php" class="btn btn__danger">Cancelar</a>
+				<a href="Automoviles.php" class="btn btn__danger">Cancelar</a>
 				<input type="submit" name="guardar" value="Guardar" class="btn btn__primary">
 			</div>
 		</form>

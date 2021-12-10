@@ -41,7 +41,7 @@
 <body id="cuerpo">
 	<header id="head" class="p-0">
 		<div class="logo">
-		<a href="principal.html"  class="ml-4 mr-5">
+		<a class="ml-4 mr-5">
 			<img src="Images/icono 1.png" width="50px">
 		</a>
 		<a class="nav-link" href="Automoviles.php" id="carCrash"><i class="fas fa-car-crash p-0"> Agregar Carro</i></a>
@@ -51,7 +51,7 @@
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
       <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
       <a class="dropdown-item" href="Registro.html">Registrarse</a>
-        <button class="switch" id="switch" onclick="Mode()">
+        <button class="switch ml-5 mt-1" id="switch" onclick="Mode()">
           <span><i class="fas fa-sun"></i></span>
           <span><i class="fas fa-moon"></i></span>
         </button>
@@ -60,7 +60,7 @@
   </header>
 
 	<div class="contenedor">
-		<h2>CRUD BASICO AUTOMOVILES</h2>
+		<h2>Administra los automoviles</h2>
 		<div class="barra__buscador">
 			<form action="" class="formulario" method="post">
 				<input type="text" name="buscar" placeholder="Buscar marca o modelo" 
