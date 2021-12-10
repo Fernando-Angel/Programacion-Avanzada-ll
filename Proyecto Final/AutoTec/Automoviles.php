@@ -69,7 +69,7 @@
 				<a href="./InsertAuto.php" class="btn btn__nuevo">Nuevo</a>
 			</form>
 		</div>
-		<table>
+		<table id="tabla">
 			<tr class="head">
 				<td>Id</td>
 				<td>Marca</td>
