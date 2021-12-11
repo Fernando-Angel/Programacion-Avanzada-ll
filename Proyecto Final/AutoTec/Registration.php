@@ -14,7 +14,7 @@ session_start();
     $Telefono = $_POST['telefono'];
     $CodigoPostal = $_POST['cp'];
  
-    $query = $connection->prepare("SELECT * FROM Clientes WHERE Email=:email");
+    $query = $connection->prepare("SELECT * FROM clientes WHERE Email=:email");
     $query->bindParam("email", $email, PDO::PARAM_STR);
     $query->execute();
  
@@ -23,7 +23,7 @@ session_start();
     }
  
     if ($query->rowCount() == 0) {
-        $query = $connection->prepare("INSERT INTO Clientes (Nombre,Apellidos,Email,Sexo,Password,Telefono,CodigoPostal) 
+        $query = $connection->prepare("INSERT INTO clientes (Nombre,Apellidos,Email,Sexo,Password,Telefono,CodigoPostal) 
         VALUES (:nombre,:apellidos,:email,:genero,:password_hash,:telefono,:cp)");
         $query->bindParam("nombre", $Nombre, PDO::PARAM_STR);
         $query->bindParam('apellidos', $Apellidos,PDO::PARAM_STR);
@@ -36,7 +36,7 @@ session_start();
  
         if ($result) {
             echo '<p class="success">Su registro fué exitoso!</p>';
-            header('Location: login.html');
+            header('Location: index.php');
             exit;
         } else {
             echo '<p class="error">Algo salió mal, verifique los datos!</p>';

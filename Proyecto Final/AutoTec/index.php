@@ -1,3 +1,34 @@
+<?php
+
+    include_once('./php/config.php');
+    session_start();
+
+    if(isset($_POST['log']))
+    {
+        $Email = $_POST['email'];
+        $Password = $_POST['password'];
+    
+        $query = $connection->prepare("SELECT * FROM Clientes WHERE Email=:email");
+        $query->bindParam("email", $Email, PDO::PARAM_STR);
+        $query->execute();
+    
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+    
+        if (!$result) {
+            echo '<p class="error">¡La combinación de contraseña de nombre de usuario es incorrecta!</p>';
+        } else {
+            if (password_verify($Password, $result['Password'])) {
+                $_SESSION['user_id'] = $result['Nombre'];
+                echo '<p class="success">¡Felicitaciones, estás conectado!</p>';
+                header('Location: Automoviles.php');
+            } else {
+                echo '<p class="error">¡La combinación de nombre de usuario y contraseña está mal!</p>';
+            }        
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,22 +48,22 @@
 </head>
 <body id="cuerpo">
 
-    <form class="formulario" method="POST" action="./login.php" name="Login" id="formulario">
+    <form class="formulario" method="POST" action="./index.php" name="Login" id="formulario">
         <h1>Login</h1>
         <div class="contenedor">
             <div class ="input-contenedor" id="grupo_correo">
                 <i class="fas fa-envelope icon"></i>
-                <input type="email" name = "email" placeholder="Correo" required>
+                <input type="email" name = "email" placeholder="Correo" required class="input__text">
                 <i class="formulario_validacion-estado fas fa-exclamation-circle"></i>
                 <p class="formulario_input-error">Introduce un correo electronico</p>
             </div>
             <div class ="input-contenedor" id="grupo_contraseña">
                 <i class="fas fa-key icon"></i>
-                <input type="password"  name = "password" placeholder="Contraseña" required >
+                <input type="password"  name = "password" placeholder="Contraseña" required class="input__text">
                 <i class="formulario_validacion-estado fas fa-exclamation-circle"></i>
                 <p class="formulario_input-error">Introduce una contraseña valido</p>
             </div>
-           <input type="submit" value ="Iniciar Sesión" class="button">
+            <input type="submit" value ="Iniciar Sesión" class="button" name="log" href="./php/islogin.php">
            <p>¿No tienes cuenta? <a class="link" href="Registro.html">Registrate</a></p>
         </div>
     </form>

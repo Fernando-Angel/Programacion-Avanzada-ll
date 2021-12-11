@@ -1,9 +1,15 @@
 <?php
 	include_once './php/config.php';
 
+	session_start();
+	$usuario = $_SESSION['user_id'];
 	$sentencia_select=$connection->prepare('SELECT * FROM Automoviles ORDER BY Id_Automovil DESC');
 	$sentencia_select->execute();
 	$resultado=$sentencia_select->fetchAll();
+
+	if (!isset($usuario)){
+		header('Location: index.php');
+	}
 
 	// metodo buscar
 	if(isset($_POST['btn_buscar'])){
@@ -17,7 +23,6 @@
 		));
 
 		$resultado=$select_buscar->fetchAll();
-
 	}
 
 ?>
@@ -47,10 +52,9 @@
 		<a class="nav-link" href="Automoviles.php" id="carCrash"><i class="fas fa-car-crash p-0"> Agregar Carro</i></a>
 		</div>
     <nav>
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"1>Acceso a clientes</a>
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"1><?php echo $usuario ?></a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-      <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
-      <a class="dropdown-item" href="Registro.html">Registrarse</a>
+      <a class="dropdown-item" href="php/logout">Cerrar Sesion</a>
         <button class="switch ml-5 mt-1" id="switch" onclick="Mode()">
           <span><i class="fas fa-sun"></i></span>
           <span><i class="fas fa-moon"></i></span>
